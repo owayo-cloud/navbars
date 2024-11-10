@@ -19,14 +19,17 @@
   <!-- Login Form -->
   <div id="loginForm">
     <h2>Login</h2>
-    <form>
+    <form id="loginFormElement" novalidate>
       <div class="form-group">
-        <i class="fa fa-user"></i>
         <input type="text" placeholder="Username" required>
+        <i class="fa fa-user"></i>
+        <div class="error-message">Please enter your username</div>
       </div>
       <div class="form-group">
+        <input type="password" id="loginPassword" placeholder="Password" required>
         <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Password" required>
+        <i class="fa fa-eye-slash toggle-password" onclick="togglePassword('loginPassword', this)"></i>
+        <div class="error-message">Please enter your password</div>
       </div>
       <div class="form-group">
         <button type="submit">Login</button>
@@ -37,22 +40,28 @@
   <!-- Signup Form -->
   <div id="signupForm" style="display: none;">
     <h2>Signup</h2>
-    <form>
+    <form id="signupFormElement" novalidate>
       <div class="form-group">
-        <i class="fa fa-user"></i>
         <input type="text" placeholder="Username" required>
+        <i class="fa fa-user"></i>
+        <div class="error-message">Please choose a username</div>
       </div>
       <div class="form-group">
-        <i class="fa fa-envelope"></i>
         <input type="email" placeholder="Email" required>
+        <i class="fa fa-envelope"></i>
+        <div class="error-message">Please enter a valid email address</div>
       </div>
       <div class="form-group">
+        <input type="password" id="signupPassword" placeholder="Password" required>
         <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Password" required>
+        <i class="fa fa-eye-slash toggle-password" onclick="togglePassword('signupPassword', this)"></i>
+        <div class="error-message">Please enter a password</div>
       </div>
       <div class="form-group">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
         <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Confirm Password" required>
+        <i class="fa fa-eye-slash toggle-password" onclick="togglePassword('confirmPassword', this)"></i>
+        <div class="error-message">Passwords don't match</div>
       </div>
       <div class="form-group">
         <button type="submit">Signup</button>
@@ -61,20 +70,7 @@
   </div>
 </div>
 
-<!-- JavaScript to toggle forms -->
-<script>
-  function showForm(form) {
-    // Toggle active tab
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.classList.remove('active');
-    });
-    document.querySelector(`.tab[onclick="showForm('${form}')"]`).classList.add('active');
-    
-    // Toggle forms
-    document.getElementById('loginForm').style.display = form === 'login' ? 'block' : 'none';
-    document.getElementById('signupForm').style.display = form === 'signup' ? 'block' : 'none';
-  }
-</script>
+<script src="static/assets/js/logSign.js"></script>
 
 </body>
 </html>
