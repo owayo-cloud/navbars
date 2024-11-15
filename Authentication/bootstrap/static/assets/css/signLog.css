@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background: linear-gradient(45deg, #050814, #290b0b, #271e0a);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     min-height: 100vh;
@@ -109,7 +109,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2rem;
-    color: #aaa;
+    color: #312e2e;
     transition: all 0.3s ease;
     pointer-events: none;
 }
@@ -120,7 +120,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #aaa;
+    color: #312e2e;
     transition: all 0.3s ease;
 }
 
