@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color: transparent;
     padding: 15px 0;
     transition: all 0.5s;
     z-index: 997;
